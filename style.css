@@ -1,0 +1,122 @@
+h1{
+    text-align: center;
+    color:black;
+}
+body{
+    background:rgb(127, 204, 181);
+}
+
+.game{
+  
+    display: grid;
+  justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+   height: 300px;
+
+
+ 
+  
+}
+.timer{
+    left: 10%;
+    position: absolute;
+}
+.valid{
+    background:rgba(0,255,0,0.5);
+    box-shadow: 2px 2px 5px 5px green;
+    animation: rotate 1s ease-in-out;
+}
+.invalid{
+    animation:invalid 0.3s ease-in-out
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(90deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes invalid{
+    0%{
+        transform: translateX(-20px);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.game div{
+    width: 100px;
+    height: 150px;
+display: grid;
+justify-content: center;
+align-items: center;
+font-size: 3em;
+
+    border: 2px solid ;
+}
+.game i{
+    color: white;
+}
+.card{
+    background:url(card.png) ;
+    
+    background-position: center;
+    background-repeat: repeat-x;
+
+}
+.game div:hover{
+    cursor: pointer;
+}
+.opacity{
+    opacity:0.2
+}
+h3,h4{
+  color: white;
+  top:20%;
+  left:30%;
+  position: absolute;
+  font-size: 5em;
+  filter: drop-shadow(0px 0px 10px black);
+animation: gameover 0.3s ease-in-out;
+}
+h4{
+    top:40%;
+    left:30%;
+    position: absolute;
+    font-size: 3em;
+}
+.newbtn{
+    top:65%;
+    left:35%;
+    position: absolute;
+    font-size: 3em;
+    color: white;
+    background: rgba(100,255,0,0.5);
+    border: none;
+    
+}
+@keyframes gameover{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+button{
+    font-size: 30px;
+   background: transparent;
+  margin-left: 50px;
+}
+button:hover{
+    cursor: pointer;
+}
